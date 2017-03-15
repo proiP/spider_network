@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base',
     'djangobower',
-    'djangobower.finders.BowerFinder',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +121,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+STATICFILES_FINDERS = (
+    'djangobower.finders.BowerFinder',
+)
 
 STATIC_URL = '/static/'
 BOWER_COMPONENTS_ROOT = '/spider_network/components/'
