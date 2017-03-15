@@ -16,6 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "semantic": "semantic-ui#^2.2.9"
   }
 }

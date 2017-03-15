@@ -1,20 +1,14 @@
-{% load staticfiles %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Spider Network</title>
-		<link rel="stylesheet" type="text/css" href="{%static 'semantic/dist/semantic.min.css' %}">
-		<link rel="stylesheet" type="text/css" media="all" href="{%static 'css/styles.css' %}">
-		<script
-			src="https://code.jquery.com/jquery-2.2.9.min.js"
-			integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-			crossorigin="anonymous"></script>
-		<script src="{%static 'semantic/dist/semantic.min.css' %}" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/semantic.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 	</head>
 
 	<body>
+		{% block content %} {% endblock %}
 	</body>
 </html>
