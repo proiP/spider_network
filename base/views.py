@@ -20,13 +20,16 @@ def get_ip_address(ifname):
 
 def home_view(request):
     template = 'body/home.html'
-    print 'test'
     context = {} # python dictionary to be sent to the template
     
     nm = nmap.PortScanner() 
     host_ip_address =  get_ip_address('wlp3s0') # current host ip addess. wlp should change depending on os 
     
     context['host_ip_address'] = host_ip_address
+    
+    data = nm.scan(hosts= host_ip_address + "/24", arguments="-sP")
+    
+    print data['nmap']['scanstats']['uphosts']
     
     return render(request, template, context)
     
