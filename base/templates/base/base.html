@@ -9,6 +9,22 @@
 	</head>
 
 	<body>
+		<div id="logo">
+			<h2></h2>
+		</div>
+		
+		<div id="menu">
+			<ul class="nav nav-pills">
+				<li class="active"><a href="{% url 'spider_network:home' %}" title="">Home</a></li>
+				<li><a href="#" title="">Network</a></li>
+				<li><a href="#" title="">Instructions</a></li>
+				
+				<!--<li><a href="instructions.php" accesskey="2" title="">Instructions</a></li>
+				<li><a href="about.php" accesskey="4" title="">About</a></li> -->
+			</ul>
+		</div>
+		<hr />
+		
 		{% block content %} {% endblock %}
 	</body>
 </html>

@@ -15,11 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from base import views
-
-app_name = 'spider_network'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home_view, name='home'),
+    url(r'^', include('base.urls', namespace='spider_network')),
 ]

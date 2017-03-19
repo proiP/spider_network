@@ -1,12 +1,41 @@
 {% extends "base/base.html" %}
 
 {% block content %}
-  <div class="container">
-    <h1>Spider Network</h1>
-    <h2>Current Host IP Address : {{ host_ip_address }}</h2>
-    <h3>Ip Address:</h3>
-    {% for host in host_list %}
-      {{host}}
-    {% endfor %}
+  <div id="page">
+    <!-- start content -->
+    <div id="content">
+      <div class="post">
+      <div class="container-fluid bg-1 text-center">
+        <div class="jumbotron ">
+        <h1>Device Inventory</h1> 
+        <p>List of all devices found on network</p> 
+        </div>
+      </div>
+      
+        <div class="entry">
+          <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-refresh"></span></button>
+            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-trash"></span></button>
+            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-download-alt"></span></button>
+          </div>
+          <table class="table table-bordered"><tr>
+          <td width='150'><b>Device Name</b></td>
+          <td width='100'><b>Brand</b></td>
+          <td width='150'><b>Model</b></td>
+          <td width='150'><b>Serial</b></td>
+          <td width='100'><b>IP Address</b></td>
+          <td width='100'><b>MAC Address</b></td>
+          
+          </table>
+          
+          
+        </div>
+        <p class="meta">Total Found &nbsp;|&nbsp;  Devices</p>
+      </div>
+      
+    </div>
+    <!-- end content -->
+
   </div>
+  <!-- end page -->
 {% endblock %}
