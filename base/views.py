@@ -27,10 +27,9 @@ def home_view(request):
     
     context['host_ip_address'] = host_ip_address
     
-    data = nm.scan(hosts= host_ip_address + "/24", arguments="-sP")
-    
-    print data['nmap']['scanstats']['uphosts']
-    
+    hosts_data = nm.scan(hosts= host_ip_address + "/24" , arguments="-sP")
+    host_list = (host for host in hosts_data['scan'])
+    context['host_list'] = host_list
     return render(request, template, context)
     
 

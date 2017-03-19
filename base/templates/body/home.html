@@ -4,5 +4,9 @@
   <div class="container">
     <h1>Spider Network</h1>
     <h2>Current Host IP Address : {{ host_ip_address }}</h2>
+    <h3>Ip Address:</h3>
+    {% for host in host_list %}
+      {{host}}
+    {% endfor %}
   </div>
 {% endblock %}
