@@ -20,6 +20,7 @@ def get_ip_address(ifname):
 
 def home_view(request):
     template = 'body/home.html'
+    print 'test'
     context = {} # python dictionary to be sent to the template
     
     nm = nmap.PortScanner() 
